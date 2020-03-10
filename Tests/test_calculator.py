@@ -10,9 +10,15 @@ class MyTestCase(unittest.TestCase):
         self.assertIsInstance(self.calculator, Calculator)
 
     def test_addition(self):
-        add = self.calculator.add(4 ,6)
-        self.assertEqual(add, 10)
+        add = self.calculator.add(2 ,2)
+        self.assertEqual(add, 4)
 
     def test_subtraction(self):
-        subtract = self.calculator.subtract(6 ,3)
-        self.assertEqual(subtract, 3)
+        subtract = self.calculator.subtract(2 ,2)
+        self.assertEqual(subtract, 0)
+
+    def test_multiplication(self):
+        product = self.calculator.product(3, 2)
+        self.assertEqual(product, 6)
+if __name__ == '__main__':
+    unittest.main()
