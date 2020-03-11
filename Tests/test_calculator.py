@@ -25,5 +25,9 @@ class MyTestCase(unittest.TestCase):
         divide = self.calculator.divide(2, 1)
         self.assertEqual(divide, 2)
 
+    def test_power(self):
+        power = self.calculator.power(3, 2)
+        self.assertEqual(power, 9)
+
 if __name__ == '__main__':
     unittest.main()

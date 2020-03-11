@@ -2,6 +2,7 @@ from Calculator.Addition import addition
 from Calculator.Subtraction import subtraction
 from Calculator.Multiplication import product
 from Calculator.Division import division
+from Calculator.Power import power
 class Calculator:
     result = 0
 
@@ -22,4 +23,8 @@ class Calculator:
 
     def divide(self, a, b):
         self.result = division(a,b)
+        return self.result
+
+    def power(self, a, b):
+        self.result = power(a, b)
         return self.result
