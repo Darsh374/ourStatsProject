@@ -20,5 +20,10 @@ class MyTestCase(unittest.TestCase):
     def test_multiplication(self):
         product = self.calculator.product(3, 2)
         self.assertEqual(product, 6)
+
+    def test_division(self):
+        divide = self.calculator.divide(2, 1)
+        self.assertEqual(divide, 2)
+
 if __name__ == '__main__':
     unittest.main()
