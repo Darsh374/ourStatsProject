@@ -29,5 +29,10 @@ class MyTestCase(unittest.TestCase):
         power = self.calculator.power(3, 2)
         self.assertEqual(power, 9)
 
+    def test_root(self):
+        root = self.calculator.root(16,2)
+        self.assertEqual(root, 4)
+        
+
 if __name__ == '__main__':
     unittest.main()
