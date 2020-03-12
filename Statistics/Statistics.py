@@ -4,6 +4,7 @@ from Statistics.Median import median
 from Statistics.Mode import mode
 from Statistics.Variance import variance
 from Statistics.StandardDeviation import standard_deviation
+from Statistics.Quartiles import quartiles
 
 class Statistics(Calculator):
 
@@ -29,4 +30,8 @@ class Statistics(Calculator):
 
     def standard_deviation(self, data):
         self.result = standard_deviation(data)
+        return self.result
+
+    def quartile(self, data):
+        self.result = quartiles(data)
         return self.result
