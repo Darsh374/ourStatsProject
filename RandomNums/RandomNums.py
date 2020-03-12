@@ -58,3 +58,11 @@ class RandomNums:
         random.shuffle(populationList)
         self.sampleList = random.sample(populationList, numSelect)
         return self.sampleList
+
+#Select N number of items from a list with a seed
+    def NItemsSeed(self, populationList, numSelect):
+        self.sampleList = []
+        random.seed(10)
+        random.shuffle(populationList)
+        self.sampleList = random.sample(populationList, numSelect)
+        return self.sampleList
