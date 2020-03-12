@@ -3,6 +3,7 @@ from Statistics.Mean import mean
 from Statistics.Median import median
 from Statistics.Mode import mode
 from Statistics.Variance import variance
+from Statistics.StandardDeviation import standard_deviation
 
 class Statistics(Calculator):
 
@@ -24,4 +25,8 @@ class Statistics(Calculator):
 
     def variance(self, data):
         self.result = variance(data)
+        return self.result
+
+    def standard_deviation(self, data):
+        self.result = standard_deviation(data)
         return self.result
