@@ -42,3 +42,9 @@ class MyTestCase(unittest.TestCase):
         quartiles = self.statistics.quartile(self.randomData)
         self.assertEqual(quartiles, (54.5, 84.5, 93.5))
 
+    def test_skewness_statisitcs(self):
+        skewness = self.statistics.skewness(self.randomData)
+        self.assertEqual(skewness, -0.4653024547677381)
+
+if __name__ == '__main__':
+    unittest.main()

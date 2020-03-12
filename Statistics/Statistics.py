@@ -5,6 +5,7 @@ from Statistics.Mode import mode
 from Statistics.Variance import variance
 from Statistics.StandardDeviation import standard_deviation
 from Statistics.Quartiles import quartiles
+from Statistics.Skewness import skewness
 
 class Statistics(Calculator):
 
@@ -34,4 +35,8 @@ class Statistics(Calculator):
 
     def quartile(self, data):
         self.result = quartiles(data)
+        return self.result
+
+    def skewness(self, data):
+        self.result = skewness(data)
         return self.result
