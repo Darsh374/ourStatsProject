@@ -35,3 +35,10 @@ class RandomNums:
             randomNumbers.append(random.randint(1, 100))
             i += 1
             pprint.pprint(randomNumbers)
+
+
+#Select a random item from a list
+    def RandomItem(self):
+        numberList = [134535, 5456464, 35435, 5646, 1212]
+        randomChoice = random.choice(numberList)
+        return randomChoice
