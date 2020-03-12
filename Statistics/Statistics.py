@@ -6,7 +6,7 @@ from Statistics.Variance import variance
 from Statistics.StandardDeviation import standard_deviation
 from Statistics.Quartiles import quartiles
 from Statistics.Skewness import skewness
-
+from Statistics.SampleCorrelation import sampleCorrelation
 class Statistics(Calculator):
 
     def __init__(self):
@@ -39,4 +39,8 @@ class Statistics(Calculator):
 
     def skewness(self, data):
         self.result = skewness(data)
+        return self.result
+
+    def sampleCorrelation(self, dataX, dataY):
+        self.result = sampleCorrelation(dataX, dataY)
         return self.result

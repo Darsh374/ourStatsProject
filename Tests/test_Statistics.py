@@ -46,5 +46,8 @@ class MyTestCase(unittest.TestCase):
         skewness = self.statistics.skewness(self.randomData)
         self.assertEqual(skewness, -0.4653024547677381)
 
+    def test_samplecorrelation_statistics(self):
+        correlation = self.statistics.sampleCorrelation(self.randomData, self.randomData) #should just be 1?
+        self.assertEqual(correlation, 1.6112726459405051)
 if __name__ == '__main__':
     unittest.main()
