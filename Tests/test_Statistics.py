@@ -16,3 +16,7 @@ class MyTestCase(unittest.TestCase):
     def test_median_calculator(self):
         median = self.statistics.median([2, 4, 6, 8, 10])
         self.assertEqual(median, 6)
+
+    def test_mode_calculator(self):
+        mode = self.statistics.mode([22, 33, 44, 44, 53])
+        self.assertEqual(mode, 44)
