@@ -49,3 +49,6 @@ class MyTestCase(unittest.TestCase):
         randomSelect = self.randomNums.RandomSelect()
         self.assertEqual(randomSelect, 35)
 
+    def test_noseedNItems_random(self):
+        nItemsNoSeed = self.randomNums.NItemsNoSeed(self.testData, 2)
+        self.assertEqual(nItemsNoSeed, [2, 74])

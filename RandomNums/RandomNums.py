@@ -52,3 +52,9 @@ class RandomNums:
 
 
 
+#Select N number of items from a list without a seed
+    def NItemsNoSeed(self, populationList, numSelect):
+        self.sampleList = []
+        random.shuffle(populationList)
+        self.sampleList = random.sample(populationList, numSelect)
+        return self.sampleList
