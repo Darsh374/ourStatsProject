@@ -24,3 +24,10 @@ class MyTestCase(unittest.TestCase):
     def test_simplerandom_statistics(self):
         simpleRandomSample = self.PopulationSampling.simpleRandomSample(self.testData, 3)
         self.assertEqual(simpleRandomSample, [34, 40, 23])
+
+        # test systematic sampling
+
+    def test_systematicsampling_statistics(self):
+        systematicSample = self.PopulationSampling.systematicSampling(self.big_testData, 10)
+        self.assertEqual(systematicSample, [])
+        
