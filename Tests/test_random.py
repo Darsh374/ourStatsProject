@@ -52,3 +52,10 @@ class MyTestCase(unittest.TestCase):
     def test_noseedNItems_random(self):
         nItemsNoSeed = self.randomNums.NItemsNoSeed(self.testData, 2)
         self.assertEqual(nItemsNoSeed, [2, 74])
+
+    def test_nItemsSeed_random(self):
+        nItemsSeed = self.randomNums.NItemsSeed(self.testData, 2)
+        self.assertEqual(nItemsSeed, [36, 63])
+
+if __name__ == '__main__':
+    unittest.main()
