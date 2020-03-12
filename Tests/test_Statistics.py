@@ -34,4 +34,7 @@ class MyTestCase(unittest.TestCase):
         variance = self.statistics.variance(self.randomData)
         self.assertEqual(variance, 2235.5)
 
+    def test_standard_deviation_calculator(self):
+        standard_deviation = self.statistics.standard_deviation(self.randomData)
+        self.assertEqual(standard_deviation, 47.281074437876306)
 
