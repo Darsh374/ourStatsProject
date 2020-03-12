@@ -7,6 +7,7 @@ from Statistics.StandardDeviation import standard_deviation
 from Statistics.Quartiles import quartiles
 from Statistics.Skewness import skewness
 from Statistics.SampleCorrelation import sampleCorrelation
+from Statistics.Zscore import zScore
 class Statistics(Calculator):
 
     def __init__(self):
@@ -43,4 +44,8 @@ class Statistics(Calculator):
 
     def sampleCorrelation(self, dataX, dataY):
         self.result = sampleCorrelation(dataX, dataY)
+        return self.result
+
+    def zScore(self, data):
+        self.result = zScore(data)
         return self.result
