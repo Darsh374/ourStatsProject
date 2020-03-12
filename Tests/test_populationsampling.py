@@ -1,6 +1,8 @@
 import unittest
 from PopulationSampling.PopulationSampling import PopulationSampling
 import random
+
+
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.PopulationSampling = PopulationSampling()
@@ -30,4 +32,10 @@ class MyTestCase(unittest.TestCase):
     def test_systematicsampling_statistics(self):
         systematicSample = self.PopulationSampling.systematicSampling(self.big_testData, 10)
         self.assertEqual(systematicSample, [])
+
+        # tests for the confidence interval for a sample
+
+    def test_confidence_statistics(self):
+        confidenceInterval = self.PopulationSampling.confidenceInterval(self.testData)
+        self.assertEqual(confidenceInterval, (34.45454545454545, '=-', 32.60215984327236))
         
