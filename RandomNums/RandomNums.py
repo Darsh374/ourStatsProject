@@ -42,3 +42,10 @@ class RandomNums:
         numberList = [134535, 5456464, 35435, 5646, 1212]
         randomChoice = random.choice(numberList)
         return randomChoice
+
+#5. Set a seed and randomly.select the same value from a list
+    def RandomSelect(self):
+        valueList = [343, 35, 4545, 5656, 56565]
+        random.seed(4)
+        sameRandom = random.choice(valueList)
+        return sameRandom
