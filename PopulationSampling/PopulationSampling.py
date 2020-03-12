@@ -15,3 +15,6 @@ class PopulationSampling(Statistics):
     def systematicSampling(self, data, sample_size):
         self.result = systematicSampling(data, sample_size)
         return self.result
+    def confidenceInterval(self, data):
+        self.result = confidenceInterval(data)
+        return self.result
