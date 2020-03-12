@@ -49,5 +49,10 @@ class MyTestCase(unittest.TestCase):
     def test_samplecorrelation_statistics(self):
         correlation = self.statistics.sampleCorrelation(self.randomData, self.randomData) #should just be 1?
         self.assertEqual(correlation, 1.6112726459405051)
+
+    def test_zscore_statisitcs(self):
+        zscore = self.statistics.zScore(self.randomData)
+        self.assertEqual(zscore, 0.4653024547677381)
+        
 if __name__ == '__main__':
     unittest.main()
