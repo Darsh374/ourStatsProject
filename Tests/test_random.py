@@ -29,3 +29,10 @@ class MyTestCase(unittest.TestCase):
         #self.assertEqual(noseedDec, .4557)
         pprint.pprint(noseedDec)
 
+    def test_seedINT_random(self):
+        seedInt = self.randomNums.RandIntSeed()
+        self.assertEqual(seedInt, 16)
+
+    def test_seedDEC_random(self):
+        seedDec = self.randomNums.RandDecSeed()
+        self.assertEqual(seedDec, 0.23796462709189137)
