@@ -40,3 +40,7 @@ class MyTestCase(unittest.TestCase):
     def test_randomList_random(self):
         randList = self.randomNums.RangeNums()
         pprint.pprint(randList)
+
+    def test_randomItem_random(self):
+        randomItem = self.randomNums.RandomItem()
+        pprint.pprint(randomItem)
