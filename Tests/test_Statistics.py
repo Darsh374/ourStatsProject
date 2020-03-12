@@ -38,3 +38,7 @@ class MyTestCase(unittest.TestCase):
         standard_deviation = self.statistics.standard_deviation(self.randomData)
         self.assertEqual(standard_deviation, 47.281074437876306)
 
+    def test_quartliles_statistics(self):
+        quartiles = self.statistics.quartile(self.randomData)
+        self.assertEqual(quartiles, (54.5, 84.5, 93.5))
+
