@@ -44,3 +44,8 @@ class MyTestCase(unittest.TestCase):
     def test_randomItem_random(self):
         randomItem = self.randomNums.RandomItem()
         pprint.pprint(randomItem)
+
+    def test_randomSelectwithSeed_random(self):
+        randomSelect = self.randomNums.RandomSelect()
+        self.assertEqual(randomSelect, 35)
+
