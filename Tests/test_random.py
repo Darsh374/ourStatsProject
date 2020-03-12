@@ -36,3 +36,7 @@ class MyTestCase(unittest.TestCase):
     def test_seedDEC_random(self):
         seedDec = self.randomNums.RandDecSeed()
         self.assertEqual(seedDec, 0.23796462709189137)
+
+    def test_randomList_random(self):
+        randList = self.randomNums.RangeNums()
+        pprint.pprint(randList)
