@@ -8,6 +8,7 @@ from Statistics.Quartiles import quartiles
 from Statistics.Skewness import skewness
 from Statistics.SampleCorrelation import sampleCorrelation
 from Statistics.Zscore import zScore
+from Statistics.MeanDeviation import meanDeviation
 class Statistics(Calculator):
 
     def __init__(self):
@@ -48,4 +49,8 @@ class Statistics(Calculator):
 
     def zScore(self, data):
         self.result = zScore(data)
+        return self.result
+
+    def mean_deviation(self, data):
+        self.result = meanDeviation(data)
         return self.result

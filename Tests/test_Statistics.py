@@ -53,6 +53,9 @@ class MyTestCase(unittest.TestCase):
     def test_zscore_statisitcs(self):
         zscore = self.statistics.zScore(self.randomData)
         self.assertEqual(zscore, 0.4653024547677381)
-        
+
+    def test_meandeviation_statisitcs(self):
+        meanDeviation = self.statistics.mean_deviation(self.randomData)
+        self.assertEqual(meanDeviation, 2235.5)
 if __name__ == '__main__':
     unittest.main()
