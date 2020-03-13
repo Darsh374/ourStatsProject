@@ -1,6 +1,11 @@
 from Statistics.Statistics import Statistics
 from PopulationSampling.SimpleRandom import simpleRandomSample
 from PopulationSampling.SystematicSampling import systematicSampling
+from PopulationSampling.SampleSizeUnknownPop import sample_size_unknown
+from PopulationSampling.SampleSizeKnownPop import samplesizeKnownPop
+from PopulationSampling.SampleSize import sampleSize
+from PopulationSampling.MarginError import margin_error
+from PopulationSampling.Confidence import confidenceInterval
 
 
 class PopulationSampling(Statistics):
