@@ -38,18 +38,25 @@ class MyTestCase(unittest.TestCase):
     def test_confidence_statistics(self):
         confidenceInterval = self.PopulationSampling.confidenceInterval(self.testData)
         self.assertEqual(confidenceInterval, (34.45454545454545, '=-', 32.60215984327236))
-        
-        #test for margin of error
+
+        # test for margin of error
+
     def test_marginoferror_statistics(self):
         marginError = self.PopulationSampling.margin_error(self.testData, 2)
         self.assertEqual(marginError, -22.94882917123613)
 
         # test cochrans sample size formula
+
     def test_samplesize_statistics(self):
         sampleSize = self.PopulationSampling.sample_size(self.big_testData, 0.5)
         self.assertEqual(sampleSize, 0.0)
 
-    #How to Find a Sample Size Given a Confidence Interval and Width (known population standard deviation)
+     # How to Find a Sample Size Given a Confidence Interval and Width (unknown population standard deviation)
+    def test_samplesizeuknown_statistics(self):
+        sample_size = self.PopulationSampling.sample_size_unknown(0.41, 0.95, 0.06)
+        self.assertEqual(sample_size, 34.13703505262291)
+
+    # How to Find a Sample Size Given a Confidence Interval and Width (known population standard deviation)
     def test_samplesizeknown_statistics(self):
         sample_size = self.PopulationSampling.samplesizeKnownPop(self.big_testData, 0.99, 0.06)
         self.assertEqual(sample_size, 1599426.4255497276)
