@@ -23,7 +23,15 @@ class PopulationSampling(Statistics):
         self.result = margin_error(data, sample_size)
         return self.result
 
+    def sample_size(self, data, proportion):
+        self.result = sampleSize(data, proportion)
+        return self.result
+
     def samplesizeKnownPop(self, data, confidence, error):
         self.result = samplesizeKnownPop(data, confidence, error)
         return self.result
+
+
+
+
 
