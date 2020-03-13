@@ -27,6 +27,10 @@ class PopulationSampling(Statistics):
         self.result = sampleSize(data, proportion)
         return self.result
 
+    def sample_size_unknown(self, percent, confidence, width):
+        self.result = sample_size_unknown(percent, confidence, width)
+        return self.result
+
     def samplesizeKnownPop(self, data, confidence, error):
         self.result = samplesizeKnownPop(data, confidence, error)
         return self.result
