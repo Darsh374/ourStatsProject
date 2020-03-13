@@ -18,3 +18,12 @@ class PopulationSampling(Statistics):
     def confidenceInterval(self, data):
         self.result = confidenceInterval(data)
         return self.result
+
+    def margin_error(self, data, sample_size):
+        self.result = margin_error(data, sample_size)
+        return self.result
+
+    def samplesizeKnownPop(self, data, confidence, error):
+        self.result = samplesizeKnownPop(data, confidence, error)
+        return self.result
+
