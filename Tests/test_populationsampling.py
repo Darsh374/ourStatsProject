@@ -39,3 +39,7 @@ class MyTestCase(unittest.TestCase):
         confidenceInterval = self.PopulationSampling.confidenceInterval(self.testData)
         self.assertEqual(confidenceInterval, (34.45454545454545, '=-', 32.60215984327236))
         
+        #test for margin of error
+    def test_marginoferror_statistics(self):
+        marginError = self.PopulationSampling.margin_error(self.testData, 2)
+        self.assertEqual(marginError, -22.94882917123613)
